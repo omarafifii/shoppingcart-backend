@@ -6,7 +6,7 @@ const router = express.Router()
 router.get('/coupon', async (req, res) => {
     // get all coupons
     try {
-        const coupons = await Coupon.getCoupon()
+        const coupons = await Coupon.getCoupon(req.query.code)
         res.send({coupons})
     } catch (error) {
         res.status(500).send(error)
