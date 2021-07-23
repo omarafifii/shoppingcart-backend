@@ -3,7 +3,7 @@ const Coupon = require('../models/Coupon')
 
 const router = express.Router()
 
-router.get('/coupons', async (req, res) => {
+router.get('/coupon', async (req, res) => {
     // get all coupons
     try {
         const coupons = await Coupon.getCoupon()
